@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Etusivu</title>
+    <link rel="stylesheet" type="text/css" href="css/tyyli.css">
+    <link rel="stylesheet" type="text/css" href="css/imgstyle.css">
+
+</head>
+
+<body>
+
+<nav>
+
+    <ul>
+        <li class="active"><a href="index.html">Etusivu</a></li>
+        <li><a href="mappi.html">Reittiohjeet</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="tekijat/tekijat.html">Tekijät</a></li>
+        <li id="kello" style="font-size: 45px; right: 0;"></li>
+        <script src="js/kello.js"></script>
+    </ul>
+</nav>
+
+<article>
+
+    <div class="box , tablerow">
+        <h1>Myyrmäen kampus</h1>
+
+        <p>Metropolia Myyrmäen kampus</p>
+
+
+        <h2>Myyrmäen kampus kartalla</h2>
+        <div id="left">
+        <iframe width="550" height="450"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=24.83730912208557%2C60.25648633371107%2C24.85110640525818%2C60.260206739214254&amp;layer=mapnik&amp;marker=60.25834658931484%2C24.844207763671875"
+                style="border: 1px solid black"></iframe><br/><small>
+        <a href="https://www.openstreetmap.org/?mlat=60.25835&amp;mlon=24.84421#map=17/60.25835/24.84421">
+            Näytä isommalla kartalla</a></small>
+        </div>
+    <div id="weather">
+        <div id="weatherpic"></div>
+    </div>
+    <script src="js/weather.js"></script>
+    </div>
+</article>
+</body>
+</html>

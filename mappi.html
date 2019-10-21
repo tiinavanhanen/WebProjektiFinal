@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kartta</title>
+    <link rel="stylesheet" type="text/css" href="css/tyyli.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    <script
+            src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js">
+    </script>
+</head>
+<body>
+
+<nav>
+
+    <ul>
+        <li><a href="index.html">Etusivu</a></li>
+        <li class="active"><a href="mappi.html">Reittiohjeet</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="tekijat/tekijat.html">Tekijät</a></li>
+        <li id="kello" style="font-size: 45px; right: 0;"></li>
+        <script src="js/kello.js"></script>
+    </ul>
+</nav>
+
+<article>
+
+    <div class="box">
+        <div style="text-align: center">
+            <h1>Metropolia Myyrmäen kampus</h1>
+
+
+            <h2>Reittiohjeet Myyrmäen kampukselle</h2>
+
+                <p>Aseta lähtöpaikka tekstikenttään ja saat reittiohjeet kampukselle.</p>
+            </div>
+        <div id="map" style="width: 90%; margin: auto; border: solid 1px black; height: 500px;"></div>
+
+        <script>
+            /*var map = L.map('map').setView([60.258695, 24.844246],16);
+
+            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}{r}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+            L.Routing.control({
+                waypoints: [null],
+                routeWhileDragging: true,
+                geocoder: L.Control.Geocoder.nominatim()
+            }).addTo(map);*/
+
+            let mymap = L.map('map').setView([60.258714, 24.844222], 17);
+            console.log(mymap);
+            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(mymap);
+            let control = L.Routing.control({
+                waypoints: [
+                    L.latLng(),
+                    L.latLng(60.258714, 24.844222)
+                ],
+
+                router: new L.Routing.osrmv1({
+                    language: 'fi',
+                    profile: 'car'
+                }),
+                geocoder: L.Control.Geocoder.nominatim({})
+            }).addTo(mymap);
+        </script>
+
+    </div>
+
+
+</article>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+.kuvia {
+    margin: auto;
+    text-align: center;
+}
+#omakuva {
+    margin: auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.henkilo {
+    max-width: 100%;
+}
+.tekija {
+    position: initial;
+    width: 70%;
+    background-color: #ff6300;
+}

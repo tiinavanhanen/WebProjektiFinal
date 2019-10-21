@@ -1,0 +1,30 @@
+img {
+    min-width: 150px;
+    max-width: 215px;
+
+
+}
+.thumb {
+    margin-left: 10px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+.kuvia {
+    text-align: center;
+}
+video {
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    max-width: 80%;
+}
+.video {
+    display: block;
+    margin-top: 5%;
+    position: center;
+
+
+
+
+}

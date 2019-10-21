@@ -1,0 +1,4 @@
+AuthUserFile /home1-3/p/paulial/.htpasswd
+AuthType Basic 
+AuthName "This page is password protected. Password required." 
+Require valid-user
